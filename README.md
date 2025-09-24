@@ -1,70 +1,13 @@
-# Getting Started with Create React App
+This project is a Recipe Finder Application built with React that lets users search for recipes and manage their favorites. It’s a Single-Page Application (SPA) that demonstrates a solid understanding of modern web development principles.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The core technologies and how they work together are:
 
-## Available Scripts
+React: The foundation of the application, used to build a dynamic and responsive user interface. Components like Navbar, Home, and Details were created to break down the UI into reusable and manageable pieces.
 
-In the project directory, you can run:
+React Router DOM: Manages client-side routing, enabling smooth navigation between different pages (/, /favorites, and /recipe-item/:id) without full page reloads.
 
-### `npm start`
+Context API: This is used for global state management. The GlobalContext provides a centralized way to handle data such as the search query (searchParam), the list of recipes (recipeList), and the user's favorites (favoritesList), making this data accessible to any component that needs it without prop drilling.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Tailwind CSS: A utility-first CSS framework used to style the application. It allowed for rapid UI development by applying classes directly in the JSX, creating a clean and modern design.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Forkify API: A third-party API used to fetch recipe data. The application uses fetch to make asynchronous requests to this API, retrieving recipe information based on the user's search input.
